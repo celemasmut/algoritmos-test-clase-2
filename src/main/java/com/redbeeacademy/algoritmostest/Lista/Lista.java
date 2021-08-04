@@ -9,17 +9,21 @@ Realizar los siguientes métodos:
 6) Dadas dos listas, crear una nueva con los elementos que se repitan en ambas
  */
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Lista {
 
     public static List<Integer> guardarEnLista(Integer numero){
         //TODO -> implement me
-        return null;
+        List<Integer> miLista=new ArrayList<>();
+        miLista.add(numero);
+        return miLista;
     }
 
     public static List<Integer> intercambiar(List<Integer> lista){
         //TODO -> implement me
+        List<Integer> miLista=new ArrayList<>();
         return null;
     }
 
