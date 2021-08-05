@@ -1,7 +1,9 @@
 package com.redbeeacademy.algoritmostest.Mapa;
 
+import javax.swing.text.StyledEditorKit;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,28 +21,30 @@ implementación de tablas hash con un string (nombre) de clave y un entero (tele
  */
 public class Agenda {
 
-    private static HashMap<String,Integer> miAgenda=
-            new HashMap<>();
+    private static HashMap<String,Integer> miAgenda= new HashMap<>();
 
     public static void nuevoContacto(String nombre, int telefono){
         //TODO -> implement me
+        miAgenda.put(nombre,telefono);
     }
 
     public static void modificarTelefono(String nombre, int telefono){
         //TODO -> implement me
+        miAgenda.put(nombre,telefono);
     }
 
     public static Integer obtenerTelefono(String nombre){
         //TODO -> implement me
-        return null;
+        return miAgenda.get(nombre);
     }
 
     public static boolean eliminarTelefono(String nombre){
         //TODO -> implement me
-        return false;
+       return miAgenda.remove(nombre,miAgenda.get(nombre));
     }
 
     protected static List<Integer> miAgenda(){
+
         return miAgenda.values().stream().collect(Collectors.toList());
     }
 
